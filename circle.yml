@@ -1,0 +1,9 @@
+dependencies:
+  pre: 
+   - sudo apt-get update; 
+
+   
+  post:
+   - mvn clean install -DskipITs
+   - cp target/*.jar $CIRCLE_ARTIFACTS/
+   
